@@ -1,0 +1,33 @@
+# Path the original sample
+output: chains/wdm_desi_yr2
+
+# Post-processing information
+post:
+  suffix: BBN # the new sample will be called "chains\planck_post_des*"
+  # If we want to skip the first third of the chain as burn in
+  #skip: 0.3
+  # Add the Gaussian likelihood for ombh2 and DES
+  add:
+    likelihood:
+      BBN_ombh2:
+        external: 'lambda _self: -0.5 * (_self.provider.get_param("ombh2") - 0.02218)**2 / (0.00055)**2'
+        requires: ["ombh2"]
+    params:
+      rdrag:
+        latex: r_\mathrm{drag}
+      hrd:
+        derived: 'lambda rdrag, H0: rdrag *(H0 / 100)'
+        latex: \mathrm{h r_\mathrm{drag}}
+
+  # Theory and CAMB settings
+  theory:
+    camb:
+      path: "/home/utkarsh/work/WDM/CAMB_DMeos/"
+      ignore_obsolete: True
+
+  # Add any additional derived parameters if needed
+  # derived:
+  #   - new_parameter
+
+
+
