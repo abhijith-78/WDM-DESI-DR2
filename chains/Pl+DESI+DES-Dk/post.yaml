@@ -1,0 +1,26 @@
+# Path the original sample
+output: chains/wdm_pl+Desi+des_dk
+
+# Post-processing information
+post:
+  suffix: hrd  # the new sample will be called "chains\planck_post_des*"
+  # If we want to skip the first third of the chain as burn in
+  #skip: 0.3
+  # Add the Gaussian likelihood for ombh2 and DES
+  add:
+    params:
+      hrd:
+        derived: 'lambda rdrag, H0: rdrag *(H0 / 100)'
+        latex: \mathrm{h r_\mathrm{drag}}
+    
+
+  theory:
+    camb:
+      path: /home/ukumar/projects/def-rgupta4/ukumar/work/WDM/wdm_plb/wdm-camb
+      extra_args:
+        halofit_version: mead
+        bbn_predictor: PArthENoPE_880.2_standard.dat
+        lens_potential_accuracy: 1
+        num_massive_neutrinos: 1
+        nnu: 3.044
+

@@ -1,0 +1,31 @@
+# Path the original sample
+output: chains_v2/wdm_des3x2_desi2_DES_dov_v2
+
+# Post-processing information
+post:
+  suffix: hrd  # the new sample will be called "chains\planck_post_des*"
+  # If we want to skip the first third of the chain as burn in
+  #skip: 0.3
+  # Add the Gaussian likelihood for ombh2 and DES
+  add:
+    params:
+      rdrag:
+        latex: r_\mathrm{drag}
+      hrd:
+        derived: 'lambda rdrag, H0: rdrag *(H0 / 100)'
+        latex: \mathrm{h r_\mathrm{drag}}
+    
+
+  # Theory and CAMB settings
+  theory:
+    camb:
+      path: /home/abhijith/PC/projects/warm_dark_matter/PLB_review/wdm-camb
+      ignore_obsolete: True
+      extra_args:
+        halofit_version: mead
+        AccuracyBoost: 1.1
+        num_massive_neutrinos: 1
+        nnu: 3.044
+        accurate_massive_neutrino_transfers: false
+        k_per_logint: 20
+        lens_potential_accuracy: 1.0

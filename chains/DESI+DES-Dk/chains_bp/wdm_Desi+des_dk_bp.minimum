@@ -1,0 +1,34 @@
+ -log(Like) = 821.250017839086
+  chi-sq    = 1642.500035678172
+
+    1  2.6886566         logA                  \log(10^{10} A_\mathrm{s})
+    3  0.87385696        ns                    n_\mathrm{s}
+    4  -6.291296603e-02  wdm                   w_{dm}
+    5  8.366265973e+01   H0                    H_0
+    6  8.556567030e-02   ombh2                 \Omega_\mathrm{b} h^2
+    7  1.585849273e-01   omch2                 \Omega_\mathrm{c} h^2
+   15  0.73071973        tau                   \tau_\mathrm{reio}
+
+   10  0.06              mnu                   mnu
+
+    2  1.471189867e-09   As                    A_\mathrm{s}
+    8  3.497357532e-01   omegam                \Omega_\mathrm{m}
+    9  2.447954642e-01   omegamh2              \Omega_\mathrm{m} h^2
+   11  6.502126325e-01   omega_de              \Omega_\Lambda
+   12  2.507108315e-01   YHe                   Y_\mathrm{P}
+   13  2.520600000e-01   Y_p                   Y_P^\mathrm{BBN}
+   14  0.9404            DHBBN                 10^5 \mathrm{D}/\mathrm{H}
+   16  10.0              zrei                  z_\mathrm{re}
+   17  9.452144231e-02   sigma8                \sigma_8
+   18  1.033390599e-01   s8h5                  \sigma_8/h^{0.5}
+   19  5.589852600e-02   s8omegamp5            \sigma_8 \Omega_\mathrm{m}^{0.5}
+   20  7.268843994e-02   s8omegamp25           \sigma_8 \Omega_\mathrm{m}^{0.25}
+   21  1.471189867e+00   A                     10^9 A_\mathrm{s}
+   22  3.411721969e-01   clamp                 10^9 A_\mathrm{s} e^{-2\tau}
+   23  1.121819910e+01   age                   {\rm{Age}}/\mathrm{Gyr}
+   24  1.194962475e+02   rdrag                 r_\mathrm{drag}
+   25  1.020562787e-01   S8                    S_8
+   26  1.005154960e+01   chi2__BAO             \chi^2_\mathrm{BAO}
+   27  1.631152164e+03   chi2__SN              \chi^2_\mathrm{SN}
+   28  1.005154960e+01   chi2__bao.desi_dr2    \chi^2_{\rm bao.desi\ dr2}
+   29  1.631152164e+03   chi2__sn.desdovekie   \chi^2_{\rm sn.desdovekie}

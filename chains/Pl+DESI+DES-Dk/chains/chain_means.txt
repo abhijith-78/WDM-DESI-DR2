@@ -1,0 +1,4 @@
+# Weighted means from combined chains
+minuslogpost  2244.274886
+minuslogprior 25.136290
+chi2          4438.277192
