@@ -1,0 +1,23 @@
+# Path the original sample
+output: chains/wdm_BAO_SDSS
+
+# Post-processing information
+post:
+  suffix: DESY5 # the new sample will be called "chains\planck_post_des*"
+  # If we want to skip the first third of the chain as burn in
+  #skip: 0.3
+  # Add the Gaussian likelihood for ombh2 and DES
+  add:
+    likelihood:
+      sn.desy5: null
+
+  # Theory and CAMB settings
+  theory:
+    camb:
+      path: "/Users/utkarshkumar/Library/CloudStorage/OneDrive-UniversityofOttawa/DM_eos/CAMB_DMeos/"
+      ignore_obsolete: True
+
+  # Add any additional derived parameters if needed
+  # derived:
+  #   - new_parameter
+
